@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Texture2D" uid="uid://cxhpbrig5ksj7" path="res://assets/background.png" id="1_c7s6e"]
+[ext_resource type="PackedScene" uid="uid://1vk535utuv8g" path="res://spaceship.tscn" id="2_wijl4"]
 
 [sub_resource type="TileSet" id="TileSet_eav63"]
 
@@ -13,7 +14,10 @@ tile_set = SubResource("TileSet_eav63")
 offset_left = -4.0
 offset_top = -1.0
 offset_right = 1159.0
-offset_bottom = 847.0
+offset_bottom = 653.0
 texture = ExtResource("1_c7s6e")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="SpaceShip" parent="." unique_id=371179598 instance=ExtResource("2_wijl4")]
+position = Vector2(375, 339)

@@ -8,5 +8,6 @@ var is_steam_initialized := false
 
 
 func _ready() -> void:
-	is_steam_initialized = Steam.steamInit(APP_ID, true)
-	print(is_steam_initialized)
+	pass
+	#is_steam_initialized = Steam.steamInit(APP_ID, true)
+	#print(is_steam_initialized)

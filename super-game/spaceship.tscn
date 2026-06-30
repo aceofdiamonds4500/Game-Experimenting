@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://1vk535utuv8g"]
+
+[ext_resource type="Script" uid="uid://cnkaq3ov80l3e" path="res://spaceship.gd" id="1_7g3nn"]
+[ext_resource type="Texture2D" uid="uid://j3bcx2j1ie8e" path="res://assets/spaceship_sprite.png" id="1_y3uy0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5up26"]
+atlas = ExtResource("1_y3uy0")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eav63"]
+size = Vector2(50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eav63"]
+atlas = ExtResource("1_y3uy0")
+region = Rect2(52, 24, 46, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfylq"]
+size = Vector2(50, 22.25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfylq"]
+atlas = ExtResource("1_y3uy0")
+region = Rect2(2, 77, 43, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p757"]
+atlas = ExtResource("1_y3uy0")
+region = Rect2(51, 57, 33, 20)
+
+[node name="SpaceShip" type="RigidBody2D" unique_id=371179598]
+gravity_scale = 0.0
+angular_damp_mode = 1
+script = ExtResource("1_7g3nn")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1446176177]
+texture = SubResource("AtlasTexture_5up26")
+
+[node name="CollisionBody" type="CollisionShape2D" parent="." unique_id=1006636936]
+shape = SubResource("RectangleShape2D_eav63")
+
+[node name="Rocket" type="Sprite2D" parent="." unique_id=712238116]
+position = Vector2(-1, 38)
+rotation = -3.1415927
+texture = SubResource("AtlasTexture_eav63")
+
+[node name="CollisionRocket" type="CollisionShape2D" parent="." unique_id=917733345]
+position = Vector2(0, 36)
+shape = SubResource("RectangleShape2D_sfylq")
+
+[node name="Turret" type="Sprite2D" parent="." unique_id=781033023]
+position = Vector2(-1, -36.25)
+scale = Vector2(1, 0.9782609)
+texture = SubResource("AtlasTexture_sfylq")
+
+[node name="CollisionTurret" type="CollisionShape2D" parent="." unique_id=1573734094]
+position = Vector2(0, -36.125)
+shape = SubResource("RectangleShape2D_sfylq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1064911463]
+position = Vector2(0, -57)
+rotation = -1.5707964
+scale = Vector2(0.7392044, 0.7392044)
+texture = SubResource("AtlasTexture_7p757")
