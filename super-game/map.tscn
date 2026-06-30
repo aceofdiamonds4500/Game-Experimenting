@@ -1,14 +1,30 @@
-[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Texture2D" uid="uid://cxhpbrig5ksj7" path="res://assets/background.png" id="1_c7s6e"]
+[ext_resource type="Texture2D" uid="uid://dfxirxrr2on" path="res://assets/asteroids.png" id="1_e0an3"]
 [ext_resource type="PackedScene" uid="uid://1vk535utuv8g" path="res://spaceship.tscn" id="2_wijl4"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5pve"]
+texture = ExtResource("1_e0an3")
+texture_region_size = Vector2i(15, 15)
+0:0/size_in_atlas = Vector2i(5, 5)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.610535, -31.610538, 20.32106, -30.48159, 34.997383, -4.515793, 25.401329, 25.401321, -1.1289444, 31.046059, -29.917114, 24.272377, -37.819748, 1.6934204)
+5:0/size_in_atlas = Vector2i(4, 4)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.46711, -22.578957, 16.369743, -29.352642, 28.788162, -10.16053, 18.063164, 14.676323, -10.725006, 17.498688, -22.014484, -7.3381615)
+0:5/size_in_atlas = Vector2i(4, 5)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.321056, -22.578957, 14.111847, -24.272377, 23.143433, -5.080265, 11.289482, 22.578957, -21.450005, 24.836853, -28.788166, -2.8223686)
+4:6/size_in_atlas = Vector2i(3, 3)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.470707, -16.568798, 9.558922, -14.657015, 12.107967, 0.63726425, 6.372616, 14.975647, -16.88743, 13.701122, -20.392368, -2.8676758)
+
 [sub_resource type="TileSet" id="TileSet_eav63"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p5pve")
 
 [node name="Map" type="Node" unique_id=1431607190]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2004947704]
-tile_set = SubResource("TileSet_eav63")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1392417982]
 offset_left = -4.0
@@ -18,6 +34,10 @@ offset_bottom = 653.0
 texture = ExtResource("1_c7s6e")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2004947704]
+tile_map_data = PackedByteArray("AAAlABoAAAAAAAAAAAAKAAsAAAAFAAAAAAA+AAkAAAAFAAAAAAA6ACQAAAAFAAAAAAApAAkAAAAEAAYAAAARACQAAAAEAAYAAAA=")
+tile_set = SubResource("TileSet_eav63")
 
 [node name="SpaceShip" parent="." unique_id=371179598 instance=ExtResource("2_wijl4")]
 position = Vector2(375, 339)
