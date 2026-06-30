@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://cxhpbrig5ksj7" path="res://assets/background.png" id="1_c7s6e"]
+
+[sub_resource type="TileSet" id="TileSet_eav63"]
+
+[node name="Map" type="Node" unique_id=1431607190]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2004947704]
+tile_set = SubResource("TileSet_eav63")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1392417982]
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 1159.0
+offset_bottom = 847.0
+texture = ExtResource("1_c7s6e")
+expand_mode = 1
+stretch_mode = 4
