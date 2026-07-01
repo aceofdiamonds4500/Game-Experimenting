@@ -1,8 +1,8 @@
 extends RigidBody2D
 
 
-const SPEED = 50.0
-const JUMP_VELOCITY = -400.0
+const MOVEMENT_SPEED := 180.0
+const ROTATION_SPEED = 10.0
 
 
 func _physics_process(delta: float) -> void:
@@ -13,9 +13,9 @@ func _physics_process(delta: float) -> void:
 	var turn_direction := Input.get_axis("ui_left", "ui_right")
 	var movement := Input.is_action_pressed("ui_up")
 	if turn_direction:
-		angular_velocity += turn_direction * SPEED * delta
+		angular_velocity += turn_direction * ROTATION_SPEED * delta
 	if movement:
-		linear_velocity -= transform.y
+		linear_velocity -= transform.y * MOVEMENT_SPEED * delta
 	angular_velocity = clamp(angular_velocity, -3,3)
 		#linear_velocity.x += move_toward(linear_velocity.x, 0, SPEED)
 	
