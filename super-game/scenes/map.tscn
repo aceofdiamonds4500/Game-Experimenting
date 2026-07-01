@@ -1,11 +1,12 @@
 [gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Texture2D" uid="uid://cxhpbrig5ksj7" path="res://assets/background.png" id="1_c7s6e"]
-[ext_resource type="Texture2D" uid="uid://dfxirxrr2on" path="res://assets/asteroids.png" id="1_e0an3"]
-[ext_resource type="PackedScene" uid="uid://1vk535utuv8g" path="res://spaceship.tscn" id="2_wijl4"]
+[ext_resource type="Texture2D" uid="uid://cxhpbrig5ksj7" path="res://assets/background.png" id="1_0cso3"]
+[ext_resource type="Texture2D" uid="uid://dfxirxrr2on" path="res://assets/asteroids.png" id="2_2klcf"]
+[ext_resource type="PackedScene" uid="uid://1vk535utuv8g" path="res://scenes/spaceship.tscn" id="3_2lpho"]
+[ext_resource type="PackedScene" uid="uid://cqrmmg6l0ilpt" path="res://scenes/asteroid.tscn" id="4_nakos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5pve"]
-texture = ExtResource("1_e0an3")
+texture = ExtResource("2_2klcf")
 texture_region_size = Vector2i(15, 15)
 0:0/size_in_atlas = Vector2i(5, 5)
 0:0/0 = 0
@@ -31,7 +32,7 @@ offset_left = -4.0
 offset_top = -1.0
 offset_right = 1159.0
 offset_bottom = 653.0
-texture = ExtResource("1_c7s6e")
+texture = ExtResource("1_0cso3")
 expand_mode = 1
 stretch_mode = 4
 
@@ -39,5 +40,8 @@ stretch_mode = 4
 tile_map_data = PackedByteArray("AAAlABoAAAAAAAAAAAAKAAsAAAAFAAAAAAA+AAkAAAAFAAAAAAA6ACQAAAAFAAAAAAApAAkAAAAEAAYAAAARACQAAAAEAAYAAAA=")
 tile_set = SubResource("TileSet_eav63")
 
-[node name="SpaceShip" parent="." unique_id=371179598 instance=ExtResource("2_wijl4")]
+[node name="SpaceShip" parent="." unique_id=371179598 instance=ExtResource("3_2lpho")]
 position = Vector2(375, 339)
+
+[node name="asteroid" parent="." unique_id=505340626 instance=ExtResource("4_nakos")]
+position = Vector2(613, 313)

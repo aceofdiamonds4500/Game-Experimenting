@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cqrmmg6l0ilpt"]
+
+[ext_resource type="Texture2D" uid="uid://dfxirxrr2on" path="res://assets/asteroids.png" id="1_u87q6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eav63"]
+atlas = ExtResource("1_u87q6")
+region = Rect2(0, 0, 73, 74)
+
+[node name="Asteroid" type="RigidBody2D" unique_id=505340626]
+mass = 20.691
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=458744522]
+texture = SubResource("AtlasTexture_eav63")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1128177204]
+polygon = PackedVector2Array(-35, -11, -25, -29, 1, -34, 30, -22, 36, 5, 20, 26, -5, 31, -24, 25, -37, 9)

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b8mplcbn7f6ky"]
+
+[ext_resource type="Script" uid="uid://dx27csuj80slk" path="res://scripts/ship_editor.gd" id="1_v7p5u"]
+[ext_resource type="Texture2D" uid="uid://bhnoitf3komwm" path="res://assets/ship_body.tres" id="2_e7pf3"]
+[ext_resource type="Texture2D" uid="uid://4dyru2i0bbtm" path="res://assets/ship_rocket.tres" id="3_e7pf3"]
+
+[node name="ShipEditor" type="Node2D" unique_id=779041221]
+script = ExtResource("1_v7p5u")
+body_tex = ExtResource("2_e7pf3")
+rocket_tex = ExtResource("3_e7pf3")

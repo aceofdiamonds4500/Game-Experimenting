@@ -27,6 +27,8 @@ window/stretch/aspect="expand"
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=0.0
+2d/default_linear_damp=-0.015000000000000013
 
 [rendering]
 
